@@ -1,0 +1,34 @@
+public class CoordenadasConversion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        //Menu para elegir
+        System.out.println("Elige la opcion de conversion:");
+        System.out.println("1.Convertir de coordenadas polares a rectangulares");
+        System.out.println("2.Convertir de coordenadas rectangulares apolares");
+        int opcion = scanner.nextInt();
+       
+        switch (opcion) {
+            case 1:
+                //Conversion de polares a rectangulares
+                System.out.println("Ingrese el radio (r):");
+                double r = scanner.nextDouble();
+                System.out.println("Ingrese el angulo (θ) en grados:");
+                double thetaGrados = scanner.nextDouble();
+               
+                //convertir el angulo de grados a radianes
+                double thetaRadianes = Math.toRadians(thetaGrados);
+                double x = r * Math.cos(thetaRadianes);
+                double y = r * Math.sin(thetaRadianes);
+               
+                System.out,System.out.printf("Coordenadas rectangulares: (x = %.2f, y = %.2f)\n", radio, anguloGrados);
+                break;
+               
+                default:
+                System.out.println("Opcion no valida.");
+                break;
+           
+        }
+        scanner.close();
+    }
+}
